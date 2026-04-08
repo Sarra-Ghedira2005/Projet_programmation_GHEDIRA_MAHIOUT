@@ -1,0 +1,14 @@
+body{
+    background-color :blue;
+    font-family : Arial, sans-serif; 
+    text-align: justify;
+}
+section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color:black
+    padding: 15px;
+}
+h1{
+    color:black
+}
