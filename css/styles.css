@@ -1,14 +1,54 @@
 body{
-    background-color :blue;
+    background-color :rgb(38, 75, 122);
     font-family : Arial, sans-serif; 
     text-align: justify;
 }
 section{
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color:black
     padding: 15px;
 }
-h1{
-    color:black
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 80px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    color: black;
+    font-size: 30px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.carousel {
+    width: 800px;
+    overflow: hidden;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slide 9s infinite;
+}
+
+.slides img {
+    flex: 0 0 33.333%;
+    height: 400px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-33.333%); }
+    66% { transform: translateX(-66.666%); }
+    100% { transform: translateX(0); }
 }
