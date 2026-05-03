@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Équipe Enseignante</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #150280, #000f7a);
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    margin: 30px;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    padding: 0 10px 10px;
+    font-size: 14px;
+}
+
+body{
+    background-color :rgb(38, 75, 122);
+    font-family : Arial, sans-serif; 
+    text-align: justify;
+}
+section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 80px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    color: black;
+    font-size: 30px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides:first-child {
+    display: block;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+</style>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="logo">EFREI</div>
+<ul class="nav-links">
+        <li><a href="acceuil.html">Accueil</a></li>
+        <li><a href="formation.html">Infos cours et formation</a></li>
+        <li><a href="agenda.html">Agenda</a></li>
+        <li><a href="equipe.html">Equipe enseignante</a></li>
+    </ul>
+</nav>
+<h1>Notre Équipe Enseignante</h1>
+
+<div class="container">
+
+    <div class="card">
+        <img src="https://via.placeholder.com/250x200" alt="Prof">
+        <h3>Jean Dupont</h3>
+        <p>Professeur de Développement Web</p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/250x200" alt="Prof">
+        <h3>Marie Martin</h3>
+        <p>Professeure de Data Science</p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/250x200" alt="Prof">
+        <h3>Lucas Bernard</h3>
+        <p>Professeur de Cybersécurité</p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/250x200" alt="Prof">
+        <h3>Sophie Leroy</h3>
+        <p>Professeure de Réseaux</p>
+    </div>
+
+</div>
+
+<script>
+// Petite interaction : message quand on clique sur un prof
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        alert("Plus d'informations bientôt !");
+    });
+});
+</script>
+
+</body>
+</html>

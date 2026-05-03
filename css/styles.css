@@ -114,3 +114,18 @@ h2 {
 .nav-links a:hover {
     color: #00bcd4;
 }
+
+
+
+
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+/* classe ajoutée quand visible */
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

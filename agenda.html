@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Agenda - Emploi du temps</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background: #185a9d;
+    color: white;
+}
+
+td {
+    height: 80px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+td:hover {
+    background: #f1f1f1;
+}
+
+/* Couleurs des matières */
+.dev { background-color: #a8e6cf; }
+.math { background-color: #ffd3b6; }
+.reseau { background-color: #dcedc1; }
+.cyber { background-color: #ffaaa5; }
+.libre { background-color: #eeeeee; }
+
+body{
+    background-color :rgb(38, 75, 122);
+    font-family : Arial, sans-serif; 
+    text-align: justify;
+}
+section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 80px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    color: black;
+    font-size: 30px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides:first-child {
+    display: block;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+</style>
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="logo">EFREI</div>
+<ul class="nav-links">
+        <li><a href="acceuil.html">Accueil</a></li>
+        <li><a href="formation.html">Infos cours et formation</a></li>
+        <li><a href="agenda.html">Agenda</a></li>
+        <li><a href="equipe.html">Equipe enseignante</a></li>
+    </ul>
+</nav>
+
+<h1> Mon Emploi du Temps</h1>
+
+<table>
+    <tr>
+        <th>Heures</th>
+        <th>Lundi</th>
+        <th>Mardi</th>
+        <th>Mercredi</th>
+        <th>Jeudi</th>
+        <th>Vendredi</th>
+    </tr>
+
+    <tr>
+        <td>8h - 10h</td>
+        <td class="dev">Développement Web</td>
+        <td class="math">Maths</td>
+        <td class="reseau">Réseaux</td>
+        <td class="cyber">Cybersécurité</td>
+        <td class="dev">Projet</td>
+    </tr>
+
+    <tr>
+        <td>10h - 12h</td>
+        <td class="math">Maths</td>
+        <td class="dev">JavaScript</td>
+        <td class="libre">Libre</td>
+        <td class="reseau">Réseaux</td>
+        <td class="cyber">Cybersécurité</td>
+    </tr>
+
+    <tr>
+        <td>13h - 15h</td>
+        <td class="reseau">Réseaux</td>
+        <td class="cyber">Cybersécurité</td>
+        <td class="dev">HTML/CSS</td>
+        <td class="math">Maths</td>
+        <td class="libre">Libre</td>
+    </tr>
+
+    <tr>
+        <td>15h - 17h</td>
+        <td class="cyber">Cybersécurité</td>
+        <td class="libre">Libre</td>
+        <td class="math">Maths</td>
+        <td class="dev">Projet</td>
+        <td class="reseau">Réseaux</td>
+    </tr>
+</table>
+
+<script>
+// Permet de modifier une case en cliquant dessus
+let cells = document.querySelectorAll("td");
+
+cells.forEach(cell => {
+    cell.addEventListener("click", () => {
+        let newCourse = prompt("Modifier le cours :", cell.textContent);
+        if (newCourse !== null) {
+            cell.textContent = newCourse;
+        }
+    });
+});
+</script>
+
+</body>
+</html>
