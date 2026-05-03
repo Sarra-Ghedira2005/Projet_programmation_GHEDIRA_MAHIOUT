@@ -12,21 +12,28 @@
 
 <body>
     <nav class="navbar">
-        <div class="logo">EFREI</div>
+        <div class="logo">
+<img src="../img/logo_efrei.png" alt="Logo EFREI" height="40"></div>
+<button class="burger" onclick="toggleMenu()">☰</button>
         <ul class="nav-links">
             <li><a href="acceuil.html">Accueil</a></li>
             <li><a href="formation.html">Infos cours et formation</a></li>
             <li><a href="agenda.html">Agenda</a></li>
             <li><a href="equipe.html">Equipe enseignante</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
             <li><a href="apropos.html">À propos</a></li>
  
         </ul>
     </nav>
 
-    <section class="hero">
-        <img src="../img/EFREI.png" width="500" height="250" alt="Logo EFREI" />
-        <h1>Département d'Informatique</h1>
-    </section>
+  <!-- PANORAMA — EN DEHORS de la section -->
+<div class="hero-banner">
+    <img src="../img/EFREI.png" alt="eFrei Paris" />
+</div>
+
+<section class="hero">
+    <h1>Département d'Informatique</h1>
+</section>
 
     <section>
         <h2>Une école d'ingénieurs en informatique</h2>
@@ -49,8 +56,8 @@
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">3 / 3</div>
-                <img src="../img/img.jpg" style="width:100%" alt="Projets étudiants">
-                <div class="text">Projets étudiants</div>
+                <img src="../img/img.jpg" style="width:100%" alt="Enseignants">
+                <div class="text">Enseignants</div>
             </div>
             <a class="prev" onclick="plusSlides(-1)">❮</a>
             <a class="next" onclick="plusSlides(1)">❯</a>
@@ -63,18 +70,51 @@
         </div>
     </section>
 
-    <section>
-        <p>Le département d'informatique de EFREI Paris forme des ingénieurs...</p>
-        <h3>Objectifs de la formation</h3>
-        <ul>
-            <li>Acquérir de solides compétences en programmation...</li>
-            ...
-        </ul>
-    </section>
+   <section id="accueil">
+
+  <h2>Une école d'ingénieurs en informatique</h2>
+  <p>
+    Le département d'informatique d'eFrei Paris forme des ingénieurs polyvalents, 
+    capables de concevoir, développer et sécuriser les systèmes numériques de demain. 
+    Adossé à Paris Panthéon-Assas Université, notre programme allie rigueur académique, 
+    projets concrets et immersion professionnelle dès la première année.
+  </p>
+
+  <h3>Objectifs de la formation</h3>
+  <ul>
+    <li>Acquérir de solides compétences en programmation (Python, Java, C++, JavaScript) et en architecture logicielle</li>
+    <li>Maîtriser les fondamentaux des réseaux, des systèmes d'exploitation et de l'administration serveur</li>
+    <li>Comprendre et appliquer les principes de la cybersécurité et de la protection des données</li>
+    <li>Développer une approche mathématique rigoureuse appliquée à l'algorithmique et à l'intelligence artificielle</li>
+    <li>Travailler en équipe sur des projets réels avec des méthodes agiles (Scrum, Kanban)</li>
+    <li>S'insérer rapidement dans le monde professionnel grâce aux partenariats entreprises et à l'alternance</li>
+  </ul>
+
+  <h3>Pourquoi choisir eFrei ?</h3>
+  <ul>
+    <li><strong>Double compétence</strong> — technique et management, pour former des ingénieurs aussi à l'aise en réunion de direction qu'en salle serveur</li>
+    <li><strong>Campus connecté</strong> — laboratoires équipés, accès cloud, outils professionnels (AWS, Azure, GitHub Enterprise)</li>
+    <li><strong>Réseau alumni</strong> — plus de 15 000 diplômés actifs dans les plus grandes entreprises tech en France et à l'international</li>
+    <li><strong>Taux d'insertion</strong> — 97 % de nos diplômés trouvent un emploi dans les 6 mois suivant l'obtention du diplôme</li>
+  </ul>
+
+  <h3>Débouchés professionnels</h3>
+  <p>
+    Nos diplômés intègrent des postes variés : développeur full-stack, ingénieur DevOps, 
+    architecte cloud, expert cybersécurité, data engineer, chef de projet IT ou encore 
+    consultant en transformation digitale. Ils évoluent dans des startups innovantes, 
+    des cabinets de conseil, des grandes entreprises du CAC 40 ou lancent leur propre 
+    activité.
+  </p>
+
+</section>
 
     <footer>
-        <p>© 2024 EFREI Paris – Département d'Informatique</p>
-    </footer>
+    <nav class="footer-nav">
+        <a href="apropos.html">À propos</a>
+    </nav>
+    <p>© 2024 EFREI Paris – Département d'Informatique</p>
+</footer>
 
     <script src="../js/script.js"></script>
 </body>

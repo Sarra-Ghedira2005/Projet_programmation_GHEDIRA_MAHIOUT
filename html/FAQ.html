@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - EFREI Informatique</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">EFREI</div>
+        <ul class="nav-links">
+            <li><a href="acceuil.html">Accueil</a></li>
+            <li><a href="formation.html">Infos cours et formation</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="equipe.html">Equipe enseignante</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+        </ul>
+    </nav>
+
+    <section id="section-faq">
+        <h1>FAQ — Green IT</h1>
+
+        <div class="suggestions">
+            <button class="sugg-btn" onclick="askSuggestion(this)">C'est quoi la Green IT ?</button>
+            <button class="sugg-btn" onclick="askSuggestion(this)">Quelles formations en informatique ?</button>
+            <button class="sugg-btn" onclick="askSuggestion(this)">Comment candidater à l'EFREI ?</button>
+            <button class="sugg-btn" onclick="askSuggestion(this)">Réduire l'empreinte carbone d'un site ?</button>
+            <button class="sugg-btn" onclick="askSuggestion(this)">Y a-t-il de l'alternance ?</button>
+        </div>
+
+        <div id="chat-box"></div>
+
+        <div class="chat-input-row">
+            <input type="text" id="user-input" placeholder="Posez votre question..."
+                   onkeydown="if(event.key==='Enter') fetchJSON('../json/intents.json')"/>
+            <button onclick="fetchJSON('../json/intents.json')">Envoyer</button>
+        </div>
+    </section>
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="apropos.html">À propos</a>
+        </nav>
+        <p>© 2024 EFREI Paris – Département d'Informatique</p>
+    </footer>
+
+    <script src="../js/chatbot.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

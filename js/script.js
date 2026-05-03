@@ -51,16 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.plusSlides = plusSlides;
   window.currentSlide = currentSlide;
 });
-// --- AGENDA : modification des cases ---
-const cells = document.querySelectorAll("td");
-cells.forEach(cell => {
-    cell.addEventListener("click", () => {
-        let newCourse = prompt("Modifier le cours :", cell.textContent);
-        if (newCourse !== null) {
-            cell.textContent = newCourse;
-        }
-    });
-});
+
 
 // --- EQUIPE : message au clic sur une carte ---
 const cards = document.querySelectorAll(".card");
@@ -140,3 +131,79 @@ if (document.getElementById("question")) {
 
     showQuestion();
 }
+
+// --- VALIDATION FORMULAIRE CONTACT ---
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let valid = true;
+        const feedback = document.getElementById("form-feedback");
+
+        contactForm.querySelectorAll("input, textarea").forEach(field => {
+            if (!field.value.trim()) {
+                field.classList.add("error");
+                field.classList.remove("success");
+                valid = false;
+            } else {
+                field.classList.add("success");
+                field.classList.remove("error");
+            }
+        });
+
+        if (valid) {
+            feedback.textContent = "✅ Votre message a bien été envoyé ! Vous recevrez une réponse sous 48h.";
+            feedback.className = "success";
+            contactForm.reset();
+            contactForm.querySelectorAll("input, textarea").forEach(f => {
+                f.classList.remove("success");
+            });
+        } else {
+            feedback.textContent = "⚠️ Merci de remplir tous les champs obligatoires.";
+            feedback.className = "error";
+        }
+    });
+
+    // Retire les bordures d'erreur quand l'utilisateur retape
+    contactForm.querySelectorAll("input, textarea").forEach(field => {
+        field.addEventListener("input", () => {
+            field.classList.remove("error");
+        });
+    });
+}
+
+// MENU BURGER
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("open");
+}
+window.toggleMenu = toggleMenu;
+
+// BOUTON RETOUR EN HAUT
+const btnTop = document.createElement("button");
+btnTop.textContent = "↑";
+btnTop.style.cssText = `
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--accent);
+    color: var(--bg-deep);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 999;
+`;
+document.body.appendChild(btnTop);
+
+window.addEventListener("scroll", () => {
+    btnTop.style.opacity = window.scrollY > 300 ? "1" : "0";
+});
+
+btnTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
