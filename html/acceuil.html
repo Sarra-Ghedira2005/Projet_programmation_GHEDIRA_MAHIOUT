@@ -1,0 +1,79 @@
+ <!-- Version 5 de HTML-->
+<html lang="fr"> <!-- Précision de la langue pour le navigateur-->
+
+<head> <!-- Entête du document HTML -->
+<title>EFREI Département d'Informatique</title> <!-- Indique au navigateur quel titre vous donnez à votre page -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel = "stylesheet" href="../css/styles.css"> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head><!-- Fin de la balise d'entête -->
+
+
+<body>
+    <nav class="navbar">
+        <div class="logo">EFREI</div>
+        <ul class="nav-links">
+            <li><a href="acceuil.html">Accueil</a></li>
+            <li><a href="formation.html">Infos cours et formation</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="equipe.html">Equipe enseignante</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <img src="../img/EFREI.png" width="500" height="250" alt="Logo EFREI" />
+        <h1>Département d'Informatique</h1>
+    </section>
+
+    <section>
+        <h2>Une école d'ingénieurs en informatique</h2>
+        <p>L'EFREI est une grande école d'ingénieurs spécialisée dans le numérique 
+        et les technologies de l'information. Elle forme des experts en informatique, 
+        cybersécurité, intelligence artificielle et développement logiciel.</p>
+    </section>
+
+    <section>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="../img/campus.webp" style="width:100%" alt="EFREI Campus">
+                <div class="text">EFREI Campus</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="../img/images.jpg" style="width:100%" alt="Vie étudiante">
+                <div class="text">Vie étudiante</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="../img/img.jpg" style="width:100%" alt="Projets étudiants">
+                <div class="text">Projets étudiants</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <section>
+        <p>Le département d'informatique de EFREI Paris forme des ingénieurs...</p>
+        <h3>Objectifs de la formation</h3>
+        <ul>
+            <li>Acquérir de solides compétences en programmation...</li>
+            ...
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2024 EFREI Paris – Département d'Informatique</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html><!-- Fin du document --> 

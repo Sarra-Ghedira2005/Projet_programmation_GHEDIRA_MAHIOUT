@@ -1,0 +1,84 @@
+{
+  "intents": [
+    {
+      "tag": "salut",
+      "patterns": ["bonjour", "salut", "hello", "bonsoir", "hi", "coucou"],
+      "responses": [
+        "Bonjour ! Je suis le chatbot FAQ du département Informatique de l'EFREI. Posez-moi vos questions sur la Green IT, les formations ou les admissions !",
+        "Salut ! Comment puis-je vous aider aujourd'hui ?"
+      ]
+    },
+    {
+      "tag": "green_it",
+      "patterns": ["green it", "sobriété", "informatique verte", "définition green", "c'est quoi green"],
+      "responses": [
+        "La Green IT (informatique verte) désigne l'ensemble des pratiques visant à réduire l'impact environnemental du numérique : réduction de la consommation énergétique, allongement de la durée de vie du matériel, optimisation du code...",
+        "La sobriété informatique cherche à minimiser l'empreinte carbone et énergétique du numérique, depuis la conception des appareils jusqu'à l'usage quotidien."
+      ]
+    },
+    {
+      "tag": "empreinte",
+      "patterns": ["empreinte carbone", "co2", "impact environnement", "pollution numérique", "consommation énergie"],
+      "responses": [
+        "Le secteur numérique représente environ 4% des émissions mondiales de CO2. Un site web mal optimisé peut émettre plusieurs grammes de CO2 par visite !",
+        "Réduire l'empreinte carbone d'un site passe par : optimiser les images, minimiser le JavaScript, utiliser un hébergement vert, et limiter les requêtes réseau."
+      ]
+    },
+    {
+      "tag": "conseils_web",
+      "patterns": ["réduire", "optimiser site", "bonnes pratiques", "code efficace", "performance web", "empreinte site"],
+      "responses": [
+        "Quelques pratiques clés : compresser les images, utiliser lazy loading, minimiser CSS/JS, préférer les polices système, et choisir un CDN écologique.",
+        "Pour un site green : évitez les scripts inutiles, utilisez le cache navigateur, réduisez les transferts de données et optez pour un hébergeur utilisant des énergies renouvelables."
+      ]
+    },
+    {
+      "tag": "formations",
+      "patterns": ["formation", "master", "licence", "spécialité", "programme", "cursus", "étude"],
+      "responses": [
+        "Le département Informatique de l'EFREI propose : L3 Informatique, M1 Génie Logiciel, M2 IA & Data Science, M2 Cybersécurité, M2 Cloud & DevOps.",
+        "Les formations couvrent le développement logiciel, l'IA, les réseaux, la cybersécurité et le cloud, avec des projets industriels tout au long du parcours."
+      ]
+    },
+    {
+      "tag": "admission",
+      "patterns": ["candidater", "admission", "comment intégrer", "rejoindre efrei", "dossier", "s'inscrire", "intégrer"],
+      "responses": [
+        "Pour candidater à l'EFREI, rendez-vous sur efrei.fr rubrique Admissions. Le dossier est en ligne, avec des entretiens de mars à juin selon le niveau visé.",
+        "Les admissions en M1/M2 se font sur dossier + entretien. En L3, un test peut être requis. Le calendrier 2025 est disponible sur le site officiel."
+      ]
+    },
+    {
+      "tag": "alternance",
+      "patterns": ["alternance", "apprentissage", "contrat", "entreprise", "stage"],
+      "responses": [
+        "Oui ! Environ 40% des étudiants du département sont en alternance, avec un rythme 3 jours entreprise / 2 jours école dès le M1.",
+        "L'EFREI dispose d'un réseau de 300+ entreprises partenaires pour les stages et l'alternance, avec un forum annuel en novembre."
+      ]
+    },
+    {
+      "tag": "recherche",
+      "patterns": ["recherche", "laboratoire", "thèse", "publication", "doctorat"],
+      "responses": [
+        "Le département dispose de 3 laboratoires de recherche actifs en IA, sécurité des systèmes et algorithmique, avec plus de 80 publications par an !",
+        "Des thèses CIFRE sont régulièrement proposées en partenariat avec des entreprises tech. Renseignez-vous auprès du bureau de la recherche."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": ["contact", "email", "téléphone", "bureau", "adresse", "joindre"],
+      "responses": [
+        "Vous pouvez contacter le département par email : dept-info@efrei.fr, ou passer au bureau C, R+2, du lundi au vendredi de 9h à 17h.",
+        "Pour toute question administrative : dept-info@efrei.fr. Pour les admissions, utilisez le formulaire sur efrei.fr."
+      ]
+    },
+    {
+      "tag": "aurevoir",
+      "patterns": ["au revoir", "bye", "à bientôt", "merci", "ciao"],
+      "responses": [
+        "Merci pour votre visite ! N'hésitez pas à revenir si vous avez d'autres questions.",
+        "À bientôt ! Bonne continuation dans votre parcours à l'EFREI."
+      ]
+    }
+  ]
+}
