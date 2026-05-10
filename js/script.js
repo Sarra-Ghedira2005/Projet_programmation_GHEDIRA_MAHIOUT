@@ -93,10 +93,10 @@ const questions = [
 ];
 
 const resultMessages = {
-    web:    "🌐 Développement Web & Logiciel — tu es fait pour créer des applications !",
-    data:   "📊 Data Science & IA — tu es fait pour analyser et modéliser !",
-    cyber:  "🔐 Cybersécurité — tu es fait pour protéger les systèmes !",
-    reseau: "🖧 Réseaux & Systèmes — tu es fait pour construire des infrastructures !"
+    web:    " Développement Web & Logiciel — tu es fait pour créer des applications !",
+    data:   " Data Science & IA — tu es fait pour analyser et modéliser !",
+    cyber:  " Cybersécurité — tu es fait pour protéger les systèmes !",
+    reseau: " Réseaux & Systèmes — tu es fait pour construire des infrastructures !"
 };
 
 // On vérifie que le quiz existe sur cette page avant de l'initialiser
@@ -152,14 +152,14 @@ if (contactForm) {
         });
 
         if (valid) {
-            feedback.textContent = "✅ Votre message a bien été envoyé ! Vous recevrez une réponse sous 48h.";
+            feedback.textContent = " Votre message a bien été envoyé ! Vous recevrez une réponse sous 48h.";
             feedback.className = "success";
             contactForm.reset();
             contactForm.querySelectorAll("input, textarea").forEach(f => {
                 f.classList.remove("success");
             });
         } else {
-            feedback.textContent = "⚠️ Merci de remplir tous les champs obligatoires.";
+            feedback.textContent = " Merci de remplir tous les champs obligatoires.";
             feedback.className = "error";
         }
     });
